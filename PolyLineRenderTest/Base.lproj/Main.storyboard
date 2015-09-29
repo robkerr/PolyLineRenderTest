@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Border View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="City Border View Controller" customClass="ViewController" customModule="PolyLineRenderTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Wq-NN-H7a">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oUp-Id-3KK"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Wq-NN-H7a" secondAttribute="trailing" id="3Vc-Es-wc6"/>
+                            <constraint firstItem="0Wq-NN-H7a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="nTe-1Y-QIz"/>
+                            <constraint firstItem="0Wq-NN-H7a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ue3-xX-z0T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Wq-NN-H7a" secondAttribute="bottom" id="yWn-cs-1XL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="0Wq-NN-H7a" id="w5P-oh-ic5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="311"/>
+        </scene>
+        <!--Simple PolyLine View Controller-->
+        <scene sceneID="ENq-vv-ZUp">
+            <objects>
+                <viewController title="Simple PolyLine Test" id="EPj-gN-hq8" userLabel="Simple PolyLine View Controller" customClass="SimplePolylineViewController" customModule="PolyLineRenderTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R8i-w7-BjN"/>
+                        <viewControllerLayoutGuide type="bottom" id="d5R-sF-Yfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Viu-98-JM0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="irk-wW-Ljp">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EPj-gN-hq8" id="041-Af-cKH"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="irk-wW-Ljp" secondAttribute="trailing" id="695-26-5RR"/>
+                            <constraint firstItem="irk-wW-Ljp" firstAttribute="top" secondItem="Viu-98-JM0" secondAttribute="topMargin" id="JsI-98-Fgw"/>
+                            <constraint firstItem="irk-wW-Ljp" firstAttribute="leading" secondItem="Viu-98-JM0" secondAttribute="leadingMargin" id="kbE-9x-8la"/>
+                            <constraint firstItem="d5R-sF-Yfx" firstAttribute="top" secondItem="irk-wW-Ljp" secondAttribute="bottom" id="ykB-1k-eKb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="irk-wW-Ljp" id="Q0a-nP-ZmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rec-gj-LPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="311"/>
+        </scene>
+    </scenes>
+</document>
